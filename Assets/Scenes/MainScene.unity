@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 325415304}
   m_Layer: 6
   m_Name: LeftCollider
-  m_TagString: Untagged
+  m_TagString: BoundaryLeft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -413,7 +413,7 @@ Transform:
   m_GameObject: {fileID: 774667754}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: -0.27, y: 3.45, z: 0.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 1050240688}
   m_Layer: 6
   m_Name: BottomCollider
-  m_TagString: Untagged
+  m_TagString: BoundaryBottom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -484,7 +484,7 @@ GameObject:
   - component: {fileID: 1553038330}
   m_Layer: 6
   m_Name: RightCollider
-  m_TagString: Untagged
+  m_TagString: BoundaryRight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -590,7 +590,7 @@ GameObject:
   - component: {fileID: 1663617995}
   m_Layer: 6
   m_Name: TopCollider
-  m_TagString: Untagged
+  m_TagString: BoundaryTop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -5,14 +5,19 @@ public enum GameState
     GameOver
 }
 
-public enum Axis
+public enum BoundaryType
 {
-    X,
-    Y,
-    Z
+    Top,
+    Bottom,
+    Left,
+    Right
 }
 public enum ObjectMovementType
 {
-    MoveLeft,
-    MoveRight,
+    HorizontalLeftToRight,
+    HorizontalRightToLeft,
+    DiagonalLeftTopToRightBottom,
+    DiagonalRightBottomToLeftTop,
+    DiagonalLeftBottomToRightTop,
+    DiagonalRightTopToLeftBottom,
 }
