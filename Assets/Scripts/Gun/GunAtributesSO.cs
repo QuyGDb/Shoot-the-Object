@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName = "GunAtributesSO", menuName = "Scriptable Objects/GunAtributesSO", order = 1)]
+[CreateAssetMenu(fileName = "GunAtributes_", menuName = "Scriptable Objects/GunAtributesSO", order = 1)]
 public class GunAtributesSO : ScriptableObject
 {
+    public string gunName;
     public float baseDamage;
     public float baseSpeed;
     public float baseIncome;
@@ -13,6 +14,7 @@ public class GunAtributesSO : ScriptableObject
     public int baseDamageLevel;
     public int baseSpeedLevel;
     public int baseIncomeLevel;
+    public int reloadTime;
     public GunAttributes gunAtributes;
     // Có xác định được max speed của gun trước nên dùng curve
     public AnimationCurve speedCurve;
@@ -24,7 +26,7 @@ public class GunAtributesSO : ScriptableObject
 
     void LoadGunAtributes()
     {
-        var gunAtr = SaveLoadManager.LoadDataFromPlayerPrefs<GunAttributes>("GunAttributes");
+        var gunAtr = SaveLoadManager.LoadDataFromPlayerPrefs<GunAttributes>(name);
         if (gunAtr != null)
         {
             gunAtributes = gunAtr;
@@ -39,7 +41,7 @@ public class GunAtributesSO : ScriptableObject
 
     public void SaveGunAtributes()
     {
-        SaveLoadManager.SaveDataToPlayerPrefs("GunAttributes", gunAtributes);
+        SaveLoadManager.SaveDataToPlayerPrefs(name, gunAtributes);
     }
 
     public void UpgradeDamage(int level)

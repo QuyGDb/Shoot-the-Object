@@ -13,6 +13,7 @@ public class GunAttributes
     public int damageLevel;
     public int speedLevel;
     public int incomeLevel;
+
     public GunAttributes(float damage, float speed, float income, float money,
                     float priceToUpgradeDamage, float priceToUpgradeSpeed, float priceToUpgradeIncome, int damageLevel, int speedLevel, int incomeLevel)
     {

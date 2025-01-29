@@ -21,3 +21,12 @@ public enum ObjectMovementType
     DiagonalLeftBottomToRightTop,
     DiagonalRightTopToLeftBottom,
 }
+
+public enum ObjectType
+{
+    Normal,
+    RewardMoney,
+    InstantLose,
+    SlowDown,
+    AddTime
+}

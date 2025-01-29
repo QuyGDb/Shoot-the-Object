@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ba853c862700a44b8f9aadd98fbc420, type: 3}
-  m_Name: GunAtributesSO
+  m_Name: GunAtributes_IceGun
   m_EditorClassIdentifier: 
+  gunName: Ice Gun
   baseDamage: 1
   baseSpeed: 5
   baseIncome: 1
@@ -19,14 +20,21 @@ MonoBehaviour:
   basePriceToUpgradeDamage: 1
   basePriceToUpgradeSpeed: 1
   basePriceToUpgradeIncome: 1
+  baseDamageLevel: 0
+  baseSpeedLevel: 0
+  baseIncomeLevel: 0
+  reloadTime: 3
   gunAtributes:
-    damage: 0
-    speed: 0
-    income: 0
+    damage: 1
+    speed: 5
+    income: 1
     money: 0
-    priceToUpgradeDamage: 0
-    priceToUpgradeSpeed: 0
-    priceToUpgradeIncome: 0
+    priceToUpgradeDamage: 1
+    priceToUpgradeSpeed: 1
+    priceToUpgradeIncome: 1
+    damageLevel: 0
+    speedLevel: 0
+    incomeLevel: 0
   speedCurve:
     serializedVersion: 2
     m_Curve:

@@ -1,6 +1,7 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Android;
 
 public class ObjectSpawner : MonoBehaviour
 {
@@ -11,9 +12,8 @@ public class ObjectSpawner : MonoBehaviour
 
     [SerializeField] private Transform rightBottomTransform;
     [SerializeField] private Transform rightTopTransform;
-
-
-
+    [SerializeField] private int numberOfObjects;
+    [SerializeField] private float levelDuration;
     private void Start()
     {
         SpawnObjects(1);
@@ -44,6 +44,15 @@ public class ObjectSpawner : MonoBehaviour
 
     private void SpawnObjects(int level)
     {
-        //PoolManager.Instance.ReuseComponent(objects[0],  Quaternion.identity);
+        if (level % 10 == 1)
+        {
+
+        }
+
+    }
+
+    private void SetHealthForObject(int level)
+    {
+
     }
 }

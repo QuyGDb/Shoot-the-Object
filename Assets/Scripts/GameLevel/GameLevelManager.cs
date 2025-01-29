@@ -6,17 +6,15 @@ public class GameLevelManager : MonoBehaviour
 
     private void Awake()
     {
-        if (PlayerPrefs.HasKey("GameLevel"))
-        {
-            gameLevel = PlayerPrefs.GetInt("GameLevel");
-        }
-        else
+        gameLevel = SaveLoadManager.LoadDataFromPlayerPrefs<int>("GameLevel");
+        if (gameLevel == 0)
         {
             gameLevel = 1;
-            PlayerPrefs.SetInt("GameLevel", gameLevel);
-            PlayerPrefs.Save();
+            SaveLoadManager.SaveDataToPlayerPrefs("GameLevel", gameLevel);
         }
     }
+    private void Start()
+    {
 
-
+    }
 }
