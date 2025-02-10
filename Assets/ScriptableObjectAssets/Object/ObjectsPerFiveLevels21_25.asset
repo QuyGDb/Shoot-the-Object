@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebac64c63c508224b91f0e490ef803c1, type: 3}
+  m_Name: ObjectsPerFiveLevels21_25
+  m_EditorClassIdentifier: 
+  healthBaseLv: 209
+  healthIncreaseRatio: 1.1
+  objects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  healthObjectsFloat:
+  - 34.833332
+  - 45.28334
+  - 92.65667
+  healthObjectsInt: 230000002e0000005d000000
+  healthLvArray:
+  - 209
+  - 229.90001
+  - 252.89001
+  - 278.17902
+  - 305.99692
+  numberOfObjectType2Lv4: 5
+  numberOfObjectType3Lv4: 1
+  numberOfObjectType2Lv5: 5
+  numberOfObjectType3Lv5: 1
+  healthOfNextLv: 336

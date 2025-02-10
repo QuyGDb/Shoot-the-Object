@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "InputSystemActionsSO", menuName = "Scriptable Object/Input/InputSystemActions")]
+[CreateAssetMenu(fileName = "InputSystemActionsSO", menuName = "Scriptable Objects/Input/InputSystemActions")]
 public class InputSystemActionsSO : ScriptableObject
 {
     private InputSystem_Actions inputActions;

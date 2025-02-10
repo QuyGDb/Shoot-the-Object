@@ -4827,6 +4827,7 @@ GameObject:
   - component: {fileID: 6230600010332850320}
   - component: {fileID: -4359196749148028937}
   - component: {fileID: 3480564203668857256}
+  - component: {fileID: 2115562886397440237}
   m_Layer: 0
   m_Name: Crate_root
   m_TagString: Untagged
@@ -4930,6 +4931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47c84fd9b3658614b80a0c9d49549f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceToAvoidOverlap: 0.1
 --- !u!65 &3480564203668857256
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4951,6 +4953,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.601572, y: 0.6001844, z: 0.602753}
   m_Center: {x: 0.0143618, y: -0.0045123696, z: 0.3014334}
+--- !u!114 &2115562886397440237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8081369773168920100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c84fd9b3658614b80a0c9d49549f34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceToAvoidOverlap: 0.1
 --- !u!1 &8132899521727562170
 GameObject:
   m_ObjectHideFlags: 0
