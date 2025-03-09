@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -94,7 +95,7 @@ public static class HelperUtilities
     /// </summary>
     public static Vector2 GetRandomDirection()
     {
-        return Random.insideUnitCircle.normalized;
+        return UnityEngine.Random.insideUnitCircle.normalized;
     }
 
     /// <summary>
@@ -193,5 +194,15 @@ public static class HelperUtilities
 
         // formula to convert from the linear scale to the logarithmic decibel scale
         return Mathf.Log10((float)linear / linearScaleRange) * 20f;
+    }
+
+
+
+    private static System.Random random = new System.Random();
+
+    public static T GetRandomEnumValue<T>() where T : Enum
+    {
+        Array values = Enum.GetValues(typeof(T));
+        return (T)values.GetValue(random.Next(values.Length));
     }
 }

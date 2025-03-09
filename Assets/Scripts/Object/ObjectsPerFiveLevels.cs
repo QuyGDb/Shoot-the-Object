@@ -8,6 +8,8 @@ public class ObjectsPerFiveLevels : ScriptableObject
     public GameObject[] objects = new GameObject[3];
     public float[] healthObjectsFloat = new float[3];
     public int[] healthObjectsInt = new int[3];
+
+    // tong hp cua moi level duoc tinh sau khi nhan button o asset
     public float[] healthLvArray = new float[5];
     //lv4
     public int numberOfObjectType2Lv4;

@@ -2,25 +2,50 @@ using UnityEngine;
 
 public class Object : MonoBehaviour
 {
-
     private LayerMask boundaryLayer;
     private string boundaryTopTag = "BoundaryTop";
     private string boundaryBottomTag = "BoundaryBottom";
     private string boundaryLeftTag = "BoundaryLeft";
     private string boundaryRightTag = "BoundaryRight";
+    private int IgnoredObject;
+    private int ObjectLayer;
     [SerializeField] float distanceToAvoidOverlap = 0.1f;
-    private ObjectMovementType objectMovementType;
-
+    public ObjectType objectType;
+    [HideInInspector] public ObjectMovementType objectMovementType;
+    public bool isColliding;
     private void Awake()
     {
         boundaryLayer = LayerMask.GetMask("Boundary");
+        IgnoredObject = LayerMask.NameToLayer("IgnoredObject");
+        ObjectLayer = LayerMask.NameToLayer("Object");
     }
     public void InitializeObject()
     {
         gameObject.SetActive(true);
     }
+    private void OnEnable()
+    {
 
+    }
+    public void ActivateObjectOnField()
+    {
+        InitializeObject();
+        gameObject.layer = ObjectLayer;
+    }
 
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if ((boundaryLayer & 1 << other.gameObject.layer) > 0)
+        {
+            if (isColliding) return;
+            objectMovementType = HelperUtilities.GetRandomEnumValue<ObjectMovementType>();
+            gameObject.layer = IgnoredObject;
+            transform.position = ObjectPositionGenerator.Instance.GetSpawnObjectPosition(objectMovementType);
+
+            isColliding = true;
+        }
+    }
     private void OnTriggerStay(Collider other)
     {
         if ((boundaryLayer & 1 << other.gameObject.layer) > 0)
@@ -43,7 +68,10 @@ public class Object : MonoBehaviour
             }
         }
     }
-
+    public void OnTriggerExit(Collider other)
+    {
+        isColliding = false;
+    }
     private void UpdatePositionToAvoidOverlap(float distance, BoundaryType boundaryType)
     {
         Vector3 newPosition = transform.position;
@@ -63,6 +91,5 @@ public class Object : MonoBehaviour
                 break;
         }
         transform.position = newPosition;
-
     }
 }

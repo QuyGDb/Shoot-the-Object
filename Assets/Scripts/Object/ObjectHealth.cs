@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class ObjectHealth : MonoBehaviour
 {
+    public float health;
     void TakeDamage(float damage)
     {
         // Do something
